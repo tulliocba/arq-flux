@@ -6,13 +6,11 @@ import Routes from './routes';
 
 function App() {
     return (
-        <>
-            <BrowserRouter>
-                <GlobalStyle />
-                <Header />
-                <Routes />
-            </BrowserRouter>
-        </>
+        <BrowserRouter>
+            <GlobalStyle />
+            <Header />
+            <Routes />
+        </BrowserRouter>
     );
 }
 
