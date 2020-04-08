@@ -13,7 +13,7 @@ function Header({ totalCart }) {
                 <img src={logo} alt="RocketSeat" />
             </Link>
 
-            <Cart>
+            <Cart to="/cart">
                 <div>
                     <strong>Meu carrinho</strong>
                     <span>{totalCart} itens</span>
@@ -24,6 +24,8 @@ function Header({ totalCart }) {
     );
 }
 
-export default connect(state => ({
+const mapStateToProps = state => ({
     totalCart: state.cart.length,
-}))(Header);
+});
+
+export default connect(mapStateToProps)(Header);
